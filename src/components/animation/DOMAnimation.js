@@ -1,18 +1,17 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import TreeElement from './TreeElement';
-import JSXIllustration from './JSXIllustration';
-import ReactExplanation from './ReactExplanation';
-import JSXExplanation from './JSXExplanation';
-import VIRTUALDOMwithReact from './VIRTUALDOMwithReact';
-import COMPONENTSExplanation from './COMPONENTSExplanation';
-import PROPSExplanation from './PROPSExplanation';
 
 const DOMAnimation = () => {
   return (
     <div className="container mx-auto p-4">
-      <h3 className="text-3xl mb-4">Illustration de la construction d'une page web</h3>
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 0.5 } }}>
+      <h3 className="text-3xl mb-4">
+        Illustration de la construction d'une page web
+      </h3>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, transition: { delay: 0.5 } }}
+      >
         <div className="font-bold">{`<html>`}</div>
         <div className="ml-2">
           <div>
@@ -38,19 +37,9 @@ const DOMAnimation = () => {
           </div>
         </div>
         <div className="font-bold">{`</html>`}</div>
-        <div className="mt-16">
-          <ReactExplanation />
-          <JSXExplanation />
-          <h3 className="text-3xl mb-4">Illustration de la syntaxe JSX 🎨</h3>
-          <JSXIllustration />
-          <VIRTUALDOMwithReact />
-          <COMPONENTSExplanation />
-          <PROPSExplanation />
-        </div>
       </motion.div>
     </div>
   );
 };
 
 export default DOMAnimation;
-

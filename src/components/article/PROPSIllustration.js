@@ -1,8 +1,8 @@
 import React from 'react'
 
-function PROPSExplanation() {
+function PROPSIllustration() {
   return (
-     <div className="container mx-auto p-4">
+         <div className="container mx-auto p-4">
       <h4 className="text-2xl mb-4">- Props -</h4>
       <p className="mb-4">
         Les composants reçoivent des données via des "props" (abréviation de "propriétés").
@@ -12,4 +12,4 @@ function PROPSExplanation() {
   )
 }
 
-export default PROPSExplanation
+export default PROPSIllustration
