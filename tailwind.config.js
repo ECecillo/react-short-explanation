@@ -10,11 +10,14 @@ module.exports = {
         'theme-dark': 'rgba(243, 244, 246, 1)',
         'theme-blue': 'rgba(255, 255, 255, 1)',
       },
+      animation: {
+        'spin-slow': 'spin 5s linear infinite',
+      },
     },
   },
   variants: {
     extend: {},
   },
   plugins: [],
-}
+};
 

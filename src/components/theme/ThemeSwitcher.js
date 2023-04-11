@@ -21,7 +21,8 @@ const ThemeButton = () => {
       className="
       fixed
       top-4 left-4
-      bg-gray-200
+      text-white
+      bg-black
       dark:bg-gray-700
       blue:bg-blue-300
       p-2
