@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
+import React, { useEffect } from 'react';
+
 import { useTheme } from '../theme/ThemeContext';
 
 const code = `const HelloWorld = (
@@ -33,7 +34,7 @@ const JSXIllustration = () => {
 
   const [primaryBackgroundColor, setPrimaryBackgroundColor] =
     React.useState('bg-gray-900');
-  const [codeBlocksBackgroundColor, setCodeBlocksBackgroundColor] = React.useState();
+  const [codeBlocksBackgroundColor, setCodeBlocksBackgroundColor] = React.useState('');
 
   useEffect(() => {
     const primaryBackgroundColorValue =
@@ -43,11 +44,7 @@ const JSXIllustration = () => {
         ? 'bg-gray-900'
         : 'bg-sky-950';
     const codeBlocksBackgroundColorValue =
-      theme === 'light'
-        ? 'bg-gray-100'
-        : theme === 'dark' || theme === 'ocean'
-        ? 'bg-sky-900'
-        : '';
+      theme === 'light' ? 'bg-gray-100' : 'bg-sky-900';
     setPrimaryBackgroundColor(primaryBackgroundColorValue);
     setCodeBlocksBackgroundColor(codeBlocksBackgroundColorValue);
   }, [theme]);

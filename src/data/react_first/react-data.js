@@ -7,6 +7,7 @@ const REACTArticle = {
     'Grâce à React, on peut assembler ces pièces pour créer des pages web interactives et "amusantes".',
   ],
   hasIllustration: false,
+  IllustrationComponent: undefined,
 };
 
 export default REACTArticle;

@@ -1,23 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  mode: 'jit',
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-  darkMode: true, // or 'media' or 'class'
+  content: [
+    './src/pages/**/*.{js,ts,jsx,tsx}',
+    './src/components/**/*.{js,ts,jsx,tsx}',
+    './src/app/**/*.{js,ts,jsx,tsx}',
+  ],
   theme: {
     extend: {
-      textColor: {
-        'theme-light': 'rgba(31, 41, 55, 1)',
-        'theme-dark': 'rgba(243, 244, 246, 1)',
-        'theme-blue': 'rgba(255, 255, 255, 1)',
-      },
-      animation: {
-        'spin-slow': 'spin 5s linear infinite',
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic':
+          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
   },
-  variants: {
-    extend: {},
-  },
   plugins: [],
-};
-
+}

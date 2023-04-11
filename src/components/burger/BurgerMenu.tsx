@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiFillCloseCircle } from 'react-icons/ai';
+import { GiHamburgerMenu } from 'react-icons/gi';
 import { Link } from 'react-scroll';
-import { chapters } from '../../data/constant';
+
+import { chapters } from '@/data/constant';
 
 const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,14 +21,14 @@ const BurgerMenu = () => {
         <GiHamburgerMenu size="30" />
       </button>
       {isOpen && (
-        <div className="fixed top-0 w-full h-full z-10 flex items-center justify-center bg-black bg-opacity-50">
-          <ul className="bg-white text-black dark:bg-gray-800 blue:bg-blue-200 rounded-lg p-4 space-y-4 text-xl">
+        <div className="fixed top-0 w-full h-full z-10 flex items-center justify-center bg-white bg-opacity-50">
+          <ul className="bg-white text-black blue:bg-blue-200 rounded-lg p-4 space-y-4 text-xl">
             <button onClick={toggleMenu}>
               <AiFillCloseCircle size="30" />
             </button>
             {/* Pour chaque élément  */}
             {chapters.map((chapter) => (
-              <li key={chapter}>
+              <li key={chapter.id}>
                 <Link to={chapter.id} smooth={true} onClick={toggleMenu}>
                   {chapter.title}
                 </Link>
