@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import ComponentsIllustration from '../../assets/Components-hierarchy.svg';
 
 const COMPONENTS_ARTICLE = {
@@ -9,7 +10,7 @@ const COMPONENTS_ARTICLE = {
   ],
   hasIllustration: true,
   IllustrationComponent: () => (
-    <img src={ComponentsIllustration} alt="Components Illustration" />
+    <Image src={ComponentsIllustration} alt="Components Illustration" />
   ),
 };
 

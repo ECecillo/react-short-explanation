@@ -1,5 +1,6 @@
-import React from 'react';
 import { motion } from 'framer-motion';
+import React from 'react';
+
 import TreeElement from './TreeElement';
 
 const DOMAnimation = () => {
@@ -12,7 +13,7 @@ const DOMAnimation = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { delay: 0.5 } }}
       >
-        <div className="font-bold">{`<html>`}</div>
+        <div className="font-bold">{'<html>'}</div>
         <div className="ml-2">
           <div>
             <TreeElement label="<head>" depth={1}>
@@ -36,7 +37,7 @@ const DOMAnimation = () => {
             <TreeElement label="</body>" />
           </div>
         </div>
-        <div className="font-bold">{`</html>`}</div>
+        <div className="font-bold">{'</html>'}</div>
       </motion.div>
     </div>
   );

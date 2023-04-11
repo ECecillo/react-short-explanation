@@ -1,3 +1,12 @@
+type ArticleConstructorProps = {
+  chapterID: string;
+  title: string;
+  subtitile?: string;
+  text: string[];
+  hasIllustration?: boolean;
+  IllustrationComponent?: () => JSX.Element;
+};
+
 function ArticleConstructor({
   chapterID,
   title,
@@ -5,7 +14,7 @@ function ArticleConstructor({
   text,
   hasIllustration = false,
   IllustrationComponent,
-}) {
+}: ArticleConstructorProps) {
   return (
     <div id={chapterID}>
       <div className={`container mx-auto p-4`}>
@@ -17,7 +26,7 @@ function ArticleConstructor({
           </p>
         ))}
       </div>
-      {hasIllustration && IllustrationComponent()}
+      {hasIllustration && IllustrationComponent!()}
     </div>
   );
 }

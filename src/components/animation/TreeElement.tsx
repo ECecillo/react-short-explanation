@@ -1,8 +1,14 @@
-import React from 'react';
 import { motion } from 'framer-motion';
+import React, { ReactElement } from 'react';
 import { useInView } from 'react-intersection-observer';
 
-const TreeElement = ({ label, children, depth = 0 }) => {
+type TreeElementProps = {
+  label: string;
+  children?: React.ReactNode;
+  depth?: number;
+};
+
+const TreeElement = ({ label, children, depth = 0 }: TreeElementProps) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -19,7 +25,11 @@ const TreeElement = ({ label, children, depth = 0 }) => {
       </motion.div>
       {children && (
         <div className="ml-2">
-          <div>{React.Children.map(children, (child, index) => React.cloneElement(child, { depth: depth + 1 }))}</div>
+          <div>
+            {React.Children.map(children, (child, index) =>
+              React.cloneElement(child! as ReactElement, { depth: depth + 1 }),
+            )}
+          </div>
         </div>
       )}
     </div>
@@ -27,4 +37,3 @@ const TreeElement = ({ label, children, depth = 0 }) => {
 };
 
 export default TreeElement;
-
